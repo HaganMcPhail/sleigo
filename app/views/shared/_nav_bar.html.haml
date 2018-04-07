@@ -1,0 +1,19 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to image_tag('/assets/logo-bw.svg'), root_path, class: 'navbar-brand'
+
+    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+      %ul.nav.navbar-nav
+
+        / Sample links
+        %li= link_to 'Home', '#'
+        %li= link_to 'Services', '#'
+        %li= link_to 'Safety', '#'
+        %li= link_to 'About', '#'
+        %li= link_to 'Contact', '#'

@@ -29,13 +29,18 @@ h2 {
   z-index:2;
   margin-top:0px;
   height:100vh;
+  background-image: url('website-header-bw.png');
+  background-position: center 80px;
+  background-attachment: fixed;
+  background-color: $light-grey;
+  height:40vh;
   .bg {
     background-image: url('bg-image-bw.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $light-grey;
-    height:100%;
+    height:50%;
   }
   img {
     position: absolute;
@@ -48,37 +53,41 @@ h2 {
 /* Bootstrap Overide */
 .navbar-default {
   border: none;
-  background-color: transparent;
+  background-color: $white;
   border-radius: 0px;
+  .navbar-header {
+    height:80px;
+  }
   .navbar-toggle, .navbar-toggle:active, .navbar-toggle:focus {
     margin-top:20px;
     border:none;
     background: transparent;
     .icon-bar {
-      background-color: $light-grey;
+      background-color: $dark-grey;
     }
     &:hover {
       background: transparent;
       .icon-bar {
-        background-color: $white;
+        background-color: $dark-grey;
       }
     }
   }
   .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
-    height:125px;
-    padding:7px 10px;
+    height: 100%;
+    padding: 0px 0px;
     img {
-      height: 100%;
+      margin-top: 25px;
+      height: 30px;
     }
   }
   .navbar-nav {
     float:right;
     li {
-      height:125px;
-      padding-top: 12px;
+      //height:125px;
+      //padding-top: 12px;
       a, a:focus, a:active, a:visited {
-        line-height: calc(125px / 2);
-        color:$white;
+        line-height: calc(80px / 2);
+        color:$dark-grey;
         text-shadow: none;
         padding-left: 25px;
       }
@@ -98,22 +107,6 @@ h2 {
         a {
           text-shadow: none;
           text-decoration: underline;
-        }
-      }
-    }
-  }
-  &.shrink {
-    background-color: $white;
-    border-bottom: 3px solid $dark-grey;
-    .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
-      height:75px;
-    }
-    .navbar-nav {
-      li {
-        height:75px;
-        a, a:focus, a:active, a:visited {
-          color: $dark-grey;
-          line-height: calc(50px / 2);
         }
       }
     }
@@ -148,20 +141,9 @@ h2 {
       z-index:2;
       margin-top:45px;
   }
-  #contact {
-    .row > div {
-      padding: 25px;
-    }
-  }
   .navbar-default {
     .navbar-toggle, .navbar-toggle:active, .navbar-toggle:focus {
       margin-top:10px;
-    }
-    .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
-      height:50px;
-      img {
-        height:40px;
-      }
     }
     .navbar-collapse {
       border-color: $primary-color;

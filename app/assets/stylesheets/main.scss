@@ -59,40 +59,45 @@ h2 {
     padding: 25px;
   }
   .tri-block {
-    padding: 50px 5%;
+    padding: 50px 25px;
     background-color: $dark-grey;
+    display: flex;
+    justify-content: center;
     .card {
-      width: 28%;
-      margin-right: 5%;
-      box-sizing: border-box;
-      display: inline-block;
+      padding: 15px 15px;
+      max-width: 400px;
       background-color: $white;
       border: 2px solid $red;
       border-radius: 10px;
-      .title {
-        text-decoration: underline;
-        color: $red;
-        font-family: "Copperplate";
-        font-size: 30px;
-        font-weight: bold;
-      }
-      .text {
-        padding: 10px 5px;
-        text-align: left;
-        font-size: 22px;
-        line-height: 45px;
-      }
-      .read-more {
-        font-family: "Serifa Bold", Copperplate;
-        text-align: right;
-        text-decoration: underline;
-        a {
-          color: $black;
-          letter-spacing: 3px;
+      display: flex;
+      flex-grow: 1;
+      padding: 15px;
+      margin: 15px;
+      .card-cont {
+        display: flex;
+        flex-direction: column;
+        .title {
+          text-decoration: underline;
+          color: $red;
+          font-family: "Copperplate";
+          font-size: 30px;
+          font-weight: bold;
         }
-      }
-      &:last-child {
-        margin-right: 0px;
+        .text {
+          padding: 10px 5px;
+          text-align: left;
+          font-size: 22px;
+          line-height: 45px;
+        }
+        .read-more {
+          font-family: "Serifa Bold", Copperplate;
+          text-align: right;
+          text-decoration: underline;
+          a {
+            color: $black;
+            letter-spacing: 4px;
+          }
+        }
       }
     }
   }
@@ -228,22 +233,21 @@ h2 {
       }
     }
   }
+}
 
-  #process {
-    .tile {
-      min-height: 255px;
-      padding-bottom: 40px;
-    }
+/* Small Devices, Desktops */
+@media only screen and (max-width : 776px) {
+  .tri-block {
+    padding: 50px 25px;
+    background-color: $dark-grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-  #process {
-    .tile {
-      min-height: 275px;
-    }
-  }
 }
 
 /* Large Devices, Wide Screens */

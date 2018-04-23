@@ -1,6 +1,7 @@
 $font-stack: Baskerville, Verdana, sans-serif;
 $primary-color: #CC2719;
 $light-grey: #f5f5f5;
+$med-grey: #EAEAEA;
 $dark-grey: #2F2C2C;
 $black: #222222;
 $white: #ffffff;
@@ -10,7 +11,6 @@ body {
   font-family: $font-stack;
   font-size: 16px;
   background-color: $light-grey;
-  min-height: 300vh;
 }
 
 section {
@@ -44,13 +44,20 @@ h2 {
       padding: 20px;
     }
   }
-  .text-block {
-    width: 80%;
-    margin: 50px auto;
-    font-weight: normal;
-    font-size: 22px;
+}
+
+#main {
+  .main-text {
+    background-color: $light-grey;
+    .text-block {
+      width: 80%;
+      margin: 50px auto;
+      font-weight: normal;
+      font-size: 22px;
+    }
   }
   .contact-bar {
+    text-align:center;
     font-family: "Copperplate";
     background-color: $red;
     color: $white;
@@ -64,6 +71,7 @@ h2 {
     display: flex;
     justify-content: center;
     .card {
+      text-align: center;
       padding: 15px 15px;
       max-width: 400px;
       background-color: $white;
@@ -98,6 +106,39 @@ h2 {
             letter-spacing: 4px;
           }
         }
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: $med-grey;
+  padding: 10px 15px;
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .footer-img-box {
+      display: flex;
+      flex-grow: 1;
+      img.footer-img {
+        height: 100%;
+        max-height: 100px;
+      }
+    }
+    .footer-text-box {
+      color: $dark-grey;
+      justify-content: flex-end;
+      font-family: "Serifa Bold", Verdana;
+      text-align: right;
+      display: flex;
+      flex-grow: 4;
+      h3 {
+        letter-spacing: 5px;
+      }
+      ul {
+        list-style-type: none;
+        letter-spacing: 2px;
       }
     }
   }

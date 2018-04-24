@@ -39,9 +39,11 @@ h2 {
   .header-content {
     height: 40vh;
     img.logo-img {
-      height: calc((40vh - 80px)/2);
+      //height: calc((40vh - 80px)/2);
       margin-top: calc(((40vh - 80px)/4) + 80px);
       padding: 20px;
+      width: 80%;
+      max-width: 800px;
     }
   }
 }
@@ -73,7 +75,7 @@ h2 {
     .card {
       text-align: center;
       padding: 15px 15px;
-      max-width: 400px;
+      max-width: 550px;
       background-color: $white;
       border: 2px solid $red;
       border-radius: 10px;
@@ -111,6 +113,61 @@ h2 {
   }
 }
 
+section.non-home {
+  margin-top: 80px;
+  .container {
+    padding: 50px 0px;
+    background-image: url('trans-logo.svg');
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-attachment: fixed;
+    text-align: center;
+    h1 {
+      text-align: left;
+      padding-left: 25px;
+      font-family: "Serifa Bold", "Copperplate";
+      color: $red;
+      text-decoration: underline;
+    }
+    .text-box {
+      padding-top: 50px;
+      font-family: "Copperplate";
+      h2 {
+        padding: 25px 50px 10px 50px;
+        text-align: left;
+        font-family: "Serifa Bold", "Copperplate";
+        text-decoration: underline;
+      }
+      p {
+        text-align: left;
+        margin: 0px auto;
+        text-transform: uppercase;
+        padding: 25px 50px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0px 50px;
+        text-align: left;
+        &.utilities {
+          width: 49%;
+          display: inline-block;
+        }
+        li {
+          padding: 10px 0px;
+          &:before {
+            content: "+";
+            margin-right: 10px;
+          }
+        }
+      }
+      &:first-of-type {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
 #footer {
   background-color: $med-grey;
   padding: 10px 15px;
@@ -132,7 +189,7 @@ h2 {
       font-family: "Serifa Bold", Verdana;
       text-align: right;
       display: flex;
-      flex-grow: 4;
+      flex-grow: 2;
       h3 {
         letter-spacing: 5px;
       }
@@ -169,7 +226,7 @@ h2 {
   }
   .navbar-brand, .navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
     height: 100%;
-    padding: 0px 0px;
+    padding: 0px 25px;
     img {
       margin-top: 25px;
       height: 30px;
@@ -178,25 +235,16 @@ h2 {
   .navbar-nav {
     float:right;
     li {
-      //height:125px;
-      //padding-top: 12px;
+      height:80px;
+      font-family: "Serifa Bold", "Copperplate";
+      letter-spacing: 3px;
+      padding: 0px 25px;
       a, a:focus, a:active, a:visited {
-        line-height: calc(80px / 2);
+        line-height: 40px;
         color:$dark-grey;
         text-shadow: none;
-        padding-left: 25px;
-      }
-      a.svg {
-        position: relative;
-        display: inline-block;
-      }
-      a.svg:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        padding: 20px 0px;
+        font-size: 20px;
       }
       &:hover {
         a {
@@ -221,7 +269,6 @@ h2 {
 @media only screen and (max-width : 768px) {
   .navbar-default .navbar-nav li {
     padding-top: 12px;
-    // float:none;
     height:auto;
     &:hover {
       background-color: $black;
@@ -274,10 +321,7 @@ h2 {
       }
     }
   }
-}
 
-/* Small Devices, Desktops */
-@media only screen and (max-width : 776px) {
   .tri-block {
     padding: 50px 25px;
     background-color: $dark-grey;
@@ -285,10 +329,46 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  section.non-home {
+    .container {
+      .text-box {
+        ul {
+          &.utilities {
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    .container {
+      width: 100%;
+      .footer-container {
+        flex-wrap: wrap;
+        .footer-img-box {
+          flex-grow: 1;
+          justify-content: center;
+        }
+        .footer-text-box {
+          justify-content: center;
+          text-align: center;
+          flex-grow: 2;
+        }
+      }
+    }
+  }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  #footer {
+    .container {
+      width: 100%;
+    }
+  }
 }
 
 /* Large Devices, Wide Screens */

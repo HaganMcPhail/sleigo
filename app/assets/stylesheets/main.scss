@@ -286,7 +286,7 @@ section.non-home {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 767px) {
   .navbar-default .navbar-nav li {
     padding-top: 12px;
     height:auto;
@@ -305,7 +305,6 @@ section.non-home {
   }
   .navbar-default {
     .navbar-toggle, .navbar-toggle:active, .navbar-toggle:focus {
-      margin-top:10px;
     }
     .navbar-collapse {
       border-color: $primary-color;
@@ -313,14 +312,12 @@ section.non-home {
     .navbar-nav {
       float:none;
       li {
-        height:45px;
-        float:none;
         padding-top: 5px;
         a, a:focus, a:active, a:visited {
-          color:$white;
+          color:$dark-grey;
           text-shadow: none;
           &:hover {
-            color: $primary-color;
+            color: $light-grey;
           }
         }
         a.social, a.social:visited, a.social:active, a.social:focus {

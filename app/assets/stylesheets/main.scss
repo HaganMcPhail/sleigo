@@ -63,10 +63,12 @@ h2 {
     text-align:center;
     font-family: "Copperplate";
     background-color: $red;
-    color: $white;
-    text-decoration: underline;
-    font-size: 30px;
     padding: 25px;
+    a {
+      color: $white;
+      text-decoration: underline;
+      font-size: 30px;
+    }
   }
   .tri-block {
     padding: 50px 25px;
